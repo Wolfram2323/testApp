@@ -58,7 +58,7 @@ Ext.define('Equipment.controller.EquipmentController', {
             var selection = this.getEqGridView().getSelectionModel();
             var rs = selection.getSelection();
             this.getEqGridView().store.remove(rs[0]);
-            this.getEqGridView().store.commitChanges();
+            this.getEqGridView().store.sync();
         },
 
         onSaveEq: function (button) {
